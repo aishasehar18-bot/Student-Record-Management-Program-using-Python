@@ -1,0 +1,27 @@
+students = []
+
+def add_student():
+    name = input("Enter student name: ")
+    grade = input("Enter grade: ")
+    students.append({"name": name, "grade": grade})
+    print("Student added successfully.\n")
+
+def view_students():
+    for s in students:
+        print(f"Name: {s['name']} ┃ Grade: {s['grade']}")
+    print()
+
+while True:
+    print("1. Add Student")
+    print("2. View Students")
+    print("3. Exit")
+    choice = input("Choose: ")
+
+    if choice == "1":
+        add_student()
+    elif choice == "2":
+        view_students()
+    elif choice == "3":
+        break
+    else:
+        print("Invalid choice.\n")
